@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: studyroom-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: studyroom-backend
+  template:
+    metadata:
+      labels:
+        app: studyroom-backend
+    spec:
+      containers:
+        - name: backend
+          image: jungmin2/studyroom-backend:latest
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mariadb://studyroom-db:3306/studyroom
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: root
