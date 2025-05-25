@@ -19,7 +19,7 @@ spec:
             - containerPort: 8081
           env:
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://studyroom-db:3306/studyroom
+              value: jdbc:mariadb://studyroom-db:3306/studyroom
             - name: SPRING_DATASOURCE_USERNAME
               value: root
             - name: SPRING_DATASOURCE_PASSWORD
