@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: yourdockerhubusername/studyroom-backend:latest
+          image: jungmin2/studyroom-backend:latest
           ports:
             - containerPort: 8081
           env:
